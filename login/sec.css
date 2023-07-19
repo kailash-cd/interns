@@ -1,0 +1,81 @@
+.container {
+    max-width: 400px;
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-bottom: 150px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .header {
+    overflow: hidden;
+    background-color: white;
+    position: sticky;
+    
+  }
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  img{
+    max-width: 100px;
+    max-height: 40px;
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+  #loginForm img{
+    height: 60px;
+    width: 90px;
+    padding-left: 140px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color:lightseagreen;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color:blue;
+  }
+  .row_copyright
+{
+
+    background-color: lightseagreen;
+    text-align: center;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+
+  }
+  
+  .footer-menu a{
+    color: #cfd2d6;
+    padding: 14px 16px ;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    float: left;
+  }
+  .footer-menu a:hover{
+    color: #27bcda;
+  }
