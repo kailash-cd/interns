@@ -81,7 +81,7 @@ const action = async () => {
           userPhotoUrl: userPhoto,
         };
 
-        localStorage.setItem("userData", JSON.stringify(userData));
+        sessionStorage.setItem("userData", JSON.stringify(userData));
         window.location.href = "./home.html";
       } else {
         console.log("Log-in Details in Invalid");

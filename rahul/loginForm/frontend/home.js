@@ -10,7 +10,7 @@ fetch("header.html")
 
 function updateHeaderWithUserData() {
   let photoUrl;
-  const storedData = localStorage.getItem("userData");
+  const storedData = sessionStorage.getItem("userData");
   const userData = JSON.parse(storedData);
   console.log("the user details get from the local storage : ", userData.userPhotoUrl.length);
 
