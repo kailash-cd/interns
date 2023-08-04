@@ -74,12 +74,12 @@ const action = async () => {
       
 
       if (result.data.message.status === 0) {
-        const userData = {
-          token: jwtToken,
-          username: fullName,
-          creditBalance: creditBalance,
-          userPhotoUrl: userPhoto,
-        };
+        // const userData = {
+        //   token: jwtToken,
+        //   username: fullName,
+        //   creditBalance: creditBalance,
+        //   userPhotoUrl: userPhoto,
+        // };
 
         sessionStorage.setItem("userData", JSON.stringify(userData));
         window.location.href = "./home.html";
