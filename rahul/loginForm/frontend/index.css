@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.headcl {
+  width: 100%;
+  height: 87.3vh;
+}
+
+.perentdiv {
+  width: 100%;
+  height: 100%;
+}
+
+.headImg {
+  height: 50px;
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+.loginImg {
+  width: 75px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meadlogin {
+  height: 90%;
+  width: 38%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.loginbox #email_error, 
+.loginbox #pass_error{
+  margin-top: 5px;
+  font-size: 14px;
+  color :red; 
+}
+
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+
+.maincl {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show  button {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.headercls {
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.iconcl {
+  margin: 2px;
+  height: 30px;
+  border: 0.5px solid white;
+  border-radius: 6px;
+}
+.msgcls {
+  justify-content: space-between;
+  padding: 3px;
+  background-color: rgb(193, 193, 193);
+  border: 1px solid black;
+  border-radius: 9px;
+  color: white;
+}
+.loginbox {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2rem;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.textcolorcls {
+  display: block;
+  text-align: start;
+  color: rgb(65, 224, 236);
+}
+.iconperent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputClass {
+  width: 90%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.buttoncls {
+  width: 90%;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(65, 224, 236);
+  border-radius: 5px;
+  height: 3.5rem;
+}
+.secondLogo {
+  margin-top: 17px;
+}
+.mainInputBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background: #5396a0;
+  height: 10%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerDiv2 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footerDiv2 ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.footerDiv1Img {
+  display: flex;
+}
+
+.midcls{
+  display: grid;
+  place-items: center;
+  height: 90vh;
+  
+}
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .meadlogin{
+        width: 80%;
+    }
+    .footerDiv2 ul {
+       
+        gap: 5px;
+        margin-right: 4px;
+        margin-left: 4x;
+       
+      }
+  
+  }
+
+  @media only screen and (min-width: 500px) and (max-width: 1000px) {
+    .meadlogin{
+        width: 60%;
+    }
+}
+
+  
