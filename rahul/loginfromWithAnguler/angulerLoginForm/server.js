@@ -11,9 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 const routeHandler = require("./src/server/route/test")
 
 app.use(cors({
-    origin: 'http://localhost:4200', // Replace with your Angular app's domain
+    origin: 'http://localhost:4200', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true // Enable sending cookies and other credentials
+    credentials: true 
   }));
 
 app.post("/api/test", (req, res)=>{

@@ -14,7 +14,7 @@ export class LoginMainComponent implements OnInit{
 
   emptyFieldsMessage = '';
   errorMessage = '';
-
+  checkvalue = false;
   ngOnInit(): void {
     sessionStorage.clear();
   }
@@ -23,7 +23,7 @@ export class LoginMainComponent implements OnInit{
     const email = (<HTMLInputElement>document.getElementById('emailid')).value;
     const pass = (<HTMLInputElement>document.getElementById('passwordid')).value;
 
-    if (email === '' || pass === '') {
+    if (email === '' || pass === '' || this.checkvalue === false) {
       this.emptyFieldsMessage = 'Fill All the fields';
     } else {
       const ans = this.validateEmail(email, pass);
@@ -78,7 +78,13 @@ export class LoginMainComponent implements OnInit{
     return true; // Replace with actual validation result
   }
 
-
+  checkbox(){
+    if(this.checkvalue ===  false){
+      this.checkvalue = true;
+    }
+  else{
+      this.checkvalue = false;
+  }}
   togglePasswordVisibility(): void {
     const passwordInput = document.getElementById('passwordid') as HTMLInputElement;
     const showButton = document.getElementById('showbutton');
