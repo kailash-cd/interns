@@ -1,43 +1,23 @@
-// async function action() {
-//   var email = document.getElementById("email").value;
-//   var pass = document.getElementById("pwd").value;
-//   if (email === "" || pass === "") {
-//     emptyFeilds.innerHTML = "Fill All the fields";
-//   } else {
-//     var ans = ValidateEmail(email, pass);
-//   }
-//   if (ans) {
-//     try {
-//       const data = { username: email, password: pass, portalName: "geoad" };
-//       const response = await axios.post(
-//         "http://localhost:4000/api/test/dataSend",
-//         data
-//       );
+document.addEventListener('DOMContentLoaded', () => {
+  loadHeaderAndFooter();
 
-//       const result = await response;
-//       let errorMessage = result.data.message.edesc;
-//       var greetingElement = document.getElementById("greeting");
-//       greetingElement.innerHTML = errorMessage;
+})
 
-//       if (result.data.message.status === 0) {
-//         window.location.href = "./home.html";
-//       } else {
-//         console.log("Log-in Details in Invalid");
-//       }
-//     } catch (error) {
-//       console.error("Error:", error);
-//     }
-//   }
-// }
+let checkboxbool = false;
+
 const action = async () => {
+
   var email = document.getElementById("email").value;
   var pass = document.getElementById("pwd").value;
-  if (email === "" || pass === "") {
-    emptyFeilds.innerHTML = "Fill All the fields";
+  var greetingElement = document.getElementById("greeting");
+
+  if (email === "" || pass === "" ||checkboxbool === false ) {
+    console.log(" the data are empty ");
+    greetingElement.innerHTML = "Fill All the fields";
   } else {
     var ans = ValidateEmail(email, pass);
   }
-  if (ans) {
+  if (email, pass) {
     try {
       const data = { username: email, password: pass, portalName: "geoad" };
       const response = await axios.post(
@@ -48,7 +28,6 @@ const action = async () => {
       const result = await response;
       console.log("the result is : ", result);
       let errorMessage = result.data.message.edesc;
-      var greetingElement = document.getElementById("greeting");
       greetingElement.innerHTML = errorMessage;
 
       // console.log(result);
@@ -74,13 +53,7 @@ const action = async () => {
       
 
       if (result.data.message.status === 0) {
-        // const userData = {
-        //   token: jwtToken,
-        //   username: fullName,
-        //   creditBalance: creditBalance,
-        //   userPhotoUrl: userPhoto,
-        // };
-
+       
         sessionStorage.setItem("userData", JSON.stringify(userData));
         window.location.href = "./home.html";
       } else {
@@ -91,6 +64,16 @@ const action = async () => {
     }
   }
 };
+
+function checkboxfun(){
+  if(checkboxbool === false){
+    checkboxbool = true;
+  }else{
+    checkboxbool = false;
+
+  }
+  console.log(" the value is : ", checkboxbool);
+}
 function loadHeaderAndFooter() {
   // Load the header
   fetch("header.html")
@@ -113,36 +96,7 @@ function loadHeaderAndFooter() {
     });
 }
 
-// Call the function to load header and footer
-loadHeaderAndFooter();
-// function ValidateEmail(email, pass) {
-//   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//   if (email.match(mailformat)) {
-//     return true;
-//   } else {
-//     console.log("Please fill up your correct e-mail");
-//     var passErrorElement = document.getElementById("email_error");
-//     passErrorElement.innerHTML = "Your Email is Incorrect";
-//   }
 
-//   if (pass.length < 4) {
-//     console.log("Character should be more than 4");
-//     var passErrorElement = document.getElementById("pass_error");
-//     passErrorElement.innerHTML = "Character should be more than 4";
-//   }
-
-//   if (!/[A-Z]/.test(pass)) {
-//     console.log("Character should be more than uppercase");
-//     var passErrorElement = document.getElementById("pass_error");
-//     passErrorElement.innerHTML = "Character should be more than uppercase";
-//   }
-
-//   if (!/[!@#$%^&*(),.?":{}|<>]/.test(pass)) {
-//     console.log("Character should be more than special");
-//     var passErrorElement = document.getElementById("pass_error");
-//     passErrorElement.innerHTML = "Character should be more than special";
-//   }
-// }
 const ValidateEmail = (email, pass) => {
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (email.match(mailformat)) {
