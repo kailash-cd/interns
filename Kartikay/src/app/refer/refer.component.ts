@@ -5,17 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './refer.component.html',
   styleUrls: ['./refer.component.css']
 })
-export class ReferComponent implements OnInit {
+export class ReferComponent  {
 
-  retrievedFirstName: string | null = null;
-  retrievedLastName: string | null = null;
-  retrievedCreditBalance: string | null = null;
-
-  constructor() {}
-
-  ngOnInit() {
-    this.retrievedFirstName = sessionStorage.getItem('firstName');
-    this.retrievedLastName = sessionStorage.getItem('lastName');
-    this.retrievedCreditBalance = sessionStorage.getItem('creditBalance');
-  }
 }

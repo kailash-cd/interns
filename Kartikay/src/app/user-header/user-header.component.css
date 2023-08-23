@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navbar img {
+    max-width: 100px;
+    max-height: 50px;
+    margin-left: 50px;
+    margin-top: 4px;
+  }
+  
+  .user-data {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 11px;
+    position: absolute;
+  }
+  
+  .userimg img {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    right: 134px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  .user-data span {
+    font-weight: bold;
+  }
+  
+  .credit-balance {
+    font-size: small;
+    color: #039db5;
+    font-weight: bold;
+  }
+
+  .credit-balance-main{
+    color: black;
+  }
+  hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -16px #039db5 inset;
+    }
+/*   
+  @media screen and (max-width: 768px) {
+    .navbar img {
+      max-width: 80px; /* Adjust as needed for smaller screens */
+    /* }
+  
+    /* .user-data {
+      margin-left: 5px; /* Adjust as needed for smaller screens */
+    /* } */
+  /* } */ 
+   /* */ 

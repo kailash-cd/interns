@@ -10,6 +10,7 @@ import { DisplayFooterComponent } from './display-footer/display-footer.componen
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReferComponent } from './refer/refer.component';
+import { UserHeaderComponent } from './user-header/user-header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { ReferComponent } from './refer/refer.component';
     DisplayHeaderComponent,
     DisplayFooterComponent,
     ReferComponent,
+    UserHeaderComponent,
     
   ],
   imports: [

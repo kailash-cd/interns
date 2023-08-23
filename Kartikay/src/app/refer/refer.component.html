@@ -8,22 +8,7 @@
     <title>Refer Page</title>
 </head>
 <body>
-    <nav class="header">
-        <a class="navbar">
-          <img src="https://cdn.cmcd1.com/logos/company_logo.png" alt="" />
-        </a>
-        
-       <div class="userimg"><img src="./assets/image/user.png" style="height:30px; width: 30px; margin: 0px;"></div><div class="user-data">
-           <span style="font-weight: bold; font-size: medium;" >{{ retrievedFirstName }}</span> 
-           <span style="font-weight: bold; font-size: medium;"> {{ retrievedLastName }}</span> 
-           <br> 
-           <span style="font-weight: bold; font-size: small;">Credits: 
-               <span style="color:#039db5">&#36;</span>
-               <span style="font-size: small; color: #039db5;">{{ retrievedCreditBalance }}</span>
-           </span> 
-       </div>
-    </nav>
-    <hr/>
+   <app-user-header></app-user-header>
     <div class="main" style="font-weight: bold;">
         Welcome Again
     </div>
