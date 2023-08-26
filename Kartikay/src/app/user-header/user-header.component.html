@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="user-header.component.css" />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a>
+          <img src="https://cdn.cmcd1.com/logos/company_logo.png" alt="" />
+        </a>
+        <div class="userimg">
+          <img src="./assets/image/user.png" alt="" />
+        </div>
+        <div class="user-data">
+          <div>
+            <span>{{ retrievedFirstName }}</span
+            >&nbsp;
+            <span>{{ retrievedLastName }}</span>
+          </div>
+          <div class="credit-balance">
+            <span class="credit-balance-main">Credits:</span> <span>&#36;</span
+            >{{ retrievedCreditBalance }}
+          </div>
+        </div>
+      </nav>
+      <hr />
+    </header>
+  </body>
+</html>
