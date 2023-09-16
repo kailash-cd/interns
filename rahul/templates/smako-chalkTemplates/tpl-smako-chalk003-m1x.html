@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        :root {
+            --creative-width-m1x: 300px;
+            --creative-height-m1x: 250px;
+            --creative-width-small: 320px;
+            --creative-height-small: 50px;
+            --creative-width-wsky: 160px;
+            --creative-height-wsky: 600px;
+            --creative-width-fb: 1200px;
+            --creative-height-fb: 628px;
+            --creative-width-fbsq: 1086px;
+            --creative-height-fbsq: 1086px;
+            --creative-width-lboard: 728px;
+            --creative-height-lboard: 90px;
+            --creative-width-billboard: 970px;
+            --creative-height-billboard: 250px;
+            --creative-width-hpage: 300px;
+            --creative-height-hpage: 600px;
+            --base-cr-font-size: 100%;
+            --base-cr-dynamic-content: '';
+            --tpl-smako-beauty0001: #725858;
+            --tpl-smako-beauty0002: #44bccc;
+            --template-font-family: Judson, Arial;
+            --font-size-m1x-agent-details-Us: 0.56rem;
+            --creative-m1x_small-heading-fontSize: 0.281rem;
+        }
+
+        @font-face {
+            font-family: 'Judson';
+            font-style: normal;
+            font-weight: 500;
+            src: local('Judson'), url('https://s3.amazonaws.com/cd_cdn/smako/fonts/Judson-Regular.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Judson';
+            font-style: italic;
+            font-weight: 500;
+            src: local('Judson'), url('https://s3.amazonaws.com/cd_cdn/smako/fonts/Judson-Italic.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Judson';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Judson'), url('https://s3.amazonaws.com/cd_cdn/smako/fonts/Judson-Bold.woff') format('woff');
+        }
+
+        html {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-size: 100%;
+            font-family: Judson, Arial;
+            line-height: 1.15;
+        }
+
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: inherit;
+            -moz-box-sizing: inherit;
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+    <script>
+        (function (window) {
+            window.templateObj = function (templateId, size) {
+                this.templateData = {};
+                this.templateId = templateId;
+                this.size = size;
+                this.elementUid = templateId + '-' + size
+                var _self = this;
+                function setTemplateData(jsonString) {
+                    try {
+                        _self.templateData = JSON.parse(jsonString);
+                    } catch (e) {
+                        console.error('Unable to parse jsonString', jsonString);
+                    }
+                }
+                this.updateUI = function (jsonString) {
+                    setTemplateData(jsonString);
+                    if (_self.templateData) {
+
+                        // initialization 
+                        var smakoLogo = _self.elementUid + '-smakoLogo';
+                        var smakoImage = _self.elementUid + '-smakoImage';
+                        var SloganText = _self.elementUid + '-SloganText';
+                        var SloganFontFamily = _self.elementUid + '-SloganFontFamily'
+                        var SloganFontSize = _self.elementUid + '-SloganFontSize'
+                        var SloganFontColor = _self.elementUid + '-SloganFontColor'
+                        var SloganFontBold = _self.elementUid + '-SloganFontBold'
+                        var SloganFontItalic = _self.elementUid + '-SloganFontItalic'
+                        var ctaText = _self.elementUid + '-ctaText'
+                        var ctaFontFamily = _self.elementUid + '-ctaFontFamily'
+                        var ctaFontSize = _self.elementUid + '-ctaFontSize'
+                        var ctaBackgroundColor = _self.elementUid + '-ctaBackgroundColor'
+                        var ctaFontBold = _self.elementUid + '-ctaFontBold'
+                        var ctaFontItalic = _self.elementUid + '-ctaFontItalic'
+                        var smakoOuterBackgroundColor = _self.elementUid + '-smakoOuterBackgroundColor';
+                        var BodyDescriptionText = _self.elementUid + '-BodyDescriptionText'
+                        var BodyDescriptionFontFamily = _self.elementUid + '-BodyDescriptionFontFamily'
+                        var BodyDescriptionFontSize = _self.elementUid + '-BodyDescriptionFontSize'
+                        var BodyDescriptionFontColor = _self.elementUid + '-BodyDescriptionFontColor'
+                        var BodyDescriptionFontBold = _self.elementUid + '-BodyDescriptionFontBold'
+                        var BodyDescriptionFontItalic = _self.elementUid + '-BodyDescriptionFontItalic'
+
+
+                        // smako UI handling
+                        if (_self.templateData.smakoLogo) {
+                            var smakoLogoElm = document.getElementById(smakoLogo);
+                            if (smakoLogoElm) {
+                                smakoLogoElm.setAttribute('src', _self.templateData.smakoLogo);
+                            }
+                        }
+                        if (_self.templateData.smakoImage) {
+                            var smakoImageElm = document.getElementById(smakoImage);
+                            if (smakoImageElm) {
+                                smakoImageElm.style.backgroundImage = `url(${_self.templateData.smakoImage})`;
+                            }
+                        }
+
+                        if (_self.templateData.SloganText) {
+                            var ctaTextElmsmakoSloganElm = document.getElementById(SloganText);
+                            if (smakoSloganElm) {
+                                smakoSloganElm.innerHTML = _self.templateData.SloganText;
+                                smakoSloganElm.style.fontFamily = _self.templateData.SloganFontFamily;
+                                smakoSloganElm.style.fontSize = _self.templateData.SloganFontSize;
+                                smakoSloganElm.style.color = _self.templateData.SloganFontColor;
+                                if (_self.templateData.SloganFontBold) {
+                                    smakoSloganElm.style.fontWeight = 'bold';
+                                } else {
+                                    smakoSloganElm.style.fontWeight = 'normal';
+                                }
+                                if (_self.templateData.SloganFontItalic) {
+                                    smakoSloganElm.style.fontStyle = 'italic';
+                                } else {
+                                    smakoSloganElm.style.fontStyle = 'normal';
+                                }
+
+                            }
+                        }
+                        if (_self.templateData.ctaText) {
+                            var ctaTextElm = document.getElementById(ctaText);
+                            if (ctaTextElm) {
+                                ctaTextElm.innerHTML = _self.templateData.ctaText;
+                                ctaTextElm.style.fontFamily = _self.templateData.ctaFontFamily;
+                                ctaTextElm.style.fontSize = _self.templateData.ctaFontSize;
+                                ctaTextElm.style.backgroundColor = _self.templateData.ctaBackgroundColor;
+                                if (_self.templateData.ctaFontBold) {
+                                    ctaTextElm.style.fontWeight = 'bold';
+                                } else {
+                                    ctaTextElm.style.fontWeight = 'normal';
+                                }
+                                if (_self.templateData.ctaFontItalic) {
+                                    ctaTextElm.style.fontStyle = 'italic';
+                                } else {
+                                    ctaTextElm.style.fontStyle = 'normal';
+                                }
+                            }
+                        }
+
+                        if (_self.templateData.smakoOuterBackgroundColor) {
+                            var smakoOuterBackgroundColorElm = document.getElementById(smakoOuterBackgroundColor);
+                            if (smakoOuterBackgroundColorElm) {
+                                smakoOuterBackgroundColorElm.style.backgroundColor = _self.templateData.smakoOuterBackgroundColorElm;
+                            }
+                        }
+
+                        if (_self.templateData.BodyDescriptionText) {
+                            var BodyDescriptionTextElm = document.getElementById(BodyDescriptionText);
+                            if (BodyDescriptionTextElm) {
+                                BodyDescriptionTextElm.innerHTML = _self.templateData.BodyDescriptionText;
+                                BodyDescriptionTextElm.style.fontFamily = _self.templateData.BodyDescriptionFontFamily;
+                                BodyDescriptionTextElm.style.fontSize = _self.templateData.BodyDescriptionFontSize;
+                                BodyDescriptionTextElm.style.color = _self.templateData.BodyDescriptionFontColor;
+                                if (_self.templateData.BodyDescriptionFontBold) {
+                                    BodyDescriptionTextElm.style.fontWeight = 'bold';
+                                } else {
+                                    BodyDescriptionTextElm.style.fontWeight = 'normal';
+                                }
+                                if (_self.templateData.BodyDescriptionFontItalic) {
+                                    BodyDescriptionTextElm.style.fontStyle = 'italic';
+                                } else {
+                                    BodyDescriptionTextElm.style.fontStyle = 'normal';
+                                }
+                            }
+                        }
+                    }
+                    return _self.templateData;
+                };
+            };
+        })(window);
+    </script>
+    <style>
+        .tpl-smako-chalk003-m1x-content {
+            font-family: Judson;
+            padding: 5px;
+            text-align: center;
+            display: block;
+            display: -webkit-box;
+            max-width: 100%;
+            height: 2.4em;
+            /* Adjust the height to fit two lines of text */
+            margin: 0 auto;
+            -webkit-line-clamp: 2;
+            /* Show a maximum of 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #fcfcfc;
+            line-height: 32.31px;
+            font-size: 31.22px;
+            font-family: Rum Raisin;
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .tpl-smako-chalk003-m1x-contanier {
+            height: 250px;
+            width: 300px;
+            background-color: white;
+            display: flex;
+            background-image: url("https://s3.amazonaws.com/cd_cdn/smako/smako-shop0002.png");
+            background-size: cover;
+            
+        }
+
+        .tpl-smako-chalk003-m1x-sloganbox {
+            width: 50%;
+            height: 100%;
+        }
+
+        .tpl-smako-chalk003-m1x-img-contanier {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tpl-smako-chalk003-m1x-imgBox {
+            width: 50%;
+            height: 100%;
+        }
+
+        .tpl-smako-chalk003-m1x-sloganContant {
+            width: 100%;
+            height: 40%;
+        }
+
+        .tpl-smako-chalk003-m1x-sloganFirst {
+            width: 100%;
+            height: 50%;
+            color: #00A0EA;
+            overflow: hidden;
+            font-size: 14px;
+            font-family: Open Sans;
+            line-height: 1;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .tpl-smako-chalk003-m1x-sloganSecound {
+            width: 100%;
+            height: 50%;
+            font-family: Open Sans;
+            overflow: hidden;
+            font-size: 14px;
+            color: #000000;
+            line-height: 1;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .tpl-smako-chalk003-m1x-buttonBox {
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tpl-smako-chalk003-m1x-customButton {
+            width: 50%;
+            height: 65%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00A0EA;
+            border: 1px solid #00A0EA;
+            color: #000000;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+        }
+
+        .tpl-smako-chalk003-m1x-logoBox {
+            width: 100%;
+            height: 30%;
+        }
+
+        .tpl-smako-chalk003-m1x-logo {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tpl-smako-chalk003-m1x-logo img {
+            width: 50%;
+            height: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tpl-smako-chalk003-m1x-contanier" id="tpl-smako-chalk003-m1x-smakoImage">
+        <div class="tpl-smako-chalk003-m1x-sloganbox" id="tpl-smako-chalk003-m1x-smakoOuterBackgroundColor">
+            <div class="tpl-smako-chalk003-m1x-logoBox">
+                <div class="tpl-smako-chalk003-m1x-logo" id="tpl-smako-chalk003-m1x-smakoLogo">
+                    <img src="https://s3.amazonaws.com/cd_cdn/smako/smako-shop0002.png" alt="">
+                </div>
+            </div>
+            <div class="tpl-smako-chalk003-m1x-sloganContant">
+                <div class="tpl-smako-chalk003-m1x-sloganFirst" id="tpl-smako-chalk003-m1x-SloganText">
+                    My slogan
+                </div>
+                <div class="tpl-smako-chalk003-m1x-sloganSecound" id="tpl-smako-chalk003-m1x-BodyDescriptionText">
+                    My Favourite Restau
+                </div>
+            </div>
+            <div class="tpl-smako-chalk003-m1x-buttonBox">
+                <div class="tpl-smako-chalk003-m1x-customButton" id="tpl-smako-chalk003-m1x-ctaText">
+                    CLICK Here
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
